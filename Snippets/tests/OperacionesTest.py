@@ -32,3 +32,7 @@ class OperacionesTest ( unittest.TestCase ) :
         self.assertEqual(12, self.operacion.suma(5, 7))
         with self.assertRaises(ValueError):
             self.operacion.suma("a", 4)
+
+    def test_no_puedo_restar_int_con_str(self):
+        self.assertEqual(8 , self.operacion.resta(2 , 7))
+        self.assertRaises(ValueError, self.operacion.resta, "2" , 7)
