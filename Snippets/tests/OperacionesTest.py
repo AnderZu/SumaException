@@ -36,7 +36,9 @@ class OperacionesTest ( unittest.TestCase ) :
     def test_no_puedo_restar_int_con_str(self):
         self.assertEqual(8 , self.operacion.resta(2 , 7))
         self.assertRaises(ValueError, self.operacion.resta, "2" , 7)
-    def test_2_no_puedo_restar_int_con_str(self):
+    def test_2_no_puedo_restar_int_y_str ( self ) :
+        self.assertRaises ( TypeError , Operaciones.resta , 2 , "7" )
+    def test_3_no_puedo_restar_int_con_str(self):
         self.assertEqual(7, self.operacion.resta(2,7))
         with self.assertRaises(ValueError):
             self.operacion.resta("a" , 7)
