@@ -31,7 +31,7 @@ if __name__ == '__main__':
         # raise ValueError
 
     resta1 = "z"
-    resta2 = 8
+    resta2 = 28
     try:
         resultado = operacion.resta(resta1,resta2)
         print("Los operandos tiene que ser numeros: {0} - {1} ".format(resta1, resta2))
