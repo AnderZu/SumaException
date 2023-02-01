@@ -21,3 +21,19 @@ if __name__ == '__main__':
     except ValueError:
         print("Los operandos tiene que ser numeros: {0} + {1} ".format(sumando1, sumando2))
 
+    try:
+        resta1 = operacion.ingresoDatos(input("ingrese el minuendo  : "))
+        resta2 = operacion.ingresoDatos(input("ingrese el sustraendo: "))
+        resultado=operacion.resta(resta1,resta2)
+        print ( "{0:.2f} - {1:.2f} = {2:.2f}".format ( resta1 , resta2, resultado ) )
+    except ValueError:
+        print("Los operandos tiene que ser numeros: {0} + {1} ".format(resta1, resta2))
+        # raise ValueError
+
+    resta1 = "z"
+    resta2 = 8
+    try:
+        resultado = operacion.resta(resta1,resta2)
+        print("Los operandos tiene que ser numeros: {0} - {1} ".format(resta1, resta2))
+    except ValueError:
+        print("Los operandos tiene que ser numeros: {0} - {1} ".format(resta1, resta2))
